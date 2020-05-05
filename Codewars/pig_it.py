@@ -9,10 +9,10 @@
 #     lst = text.split()
 #     return ' '.join( [word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in lst])
 
+
 def pig_it(text):
     words = text.split()
-    signs = {"!", "?"}
-    return " ".join([("{0}{1}ay".format(i[1:], i[0]), i)[i in signs] for i in words])
+    return " ".join([("{0}{1}ay".format(i[1:], i[0]), i)[not i.isalpha()] for i in words])
 
 
 print(pig_it("Quis custodiet ipsos custodes ?"))

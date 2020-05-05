@@ -1,4 +1,4 @@
-from Modules.data_abstraction.quests import url
+from Hexlet.data_abstraction.quests import url
 
 
 def test_url():
