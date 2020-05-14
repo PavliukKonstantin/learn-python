@@ -1,4 +1,4 @@
-from Codewars.pig_it import pig_it
+from codewars.pig_it import pig_it
 
 
 def test_pig_it():
@@ -7,3 +7,6 @@ def test_pig_it():
     assert pig_it(
         "Quis custodiet ipsos custodes ?"
         ) == 'uisQay ustodietcay psosiay ustodescay ?'
+
+
+print(test_pig_it())

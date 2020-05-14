@@ -15,4 +15,5 @@ def pig_it(text):
     return " ".join([("{0}{1}ay".format(i[1:], i[0]), i)[not i.isalpha()] for i in words])
 
 
-print(pig_it("Quis custodiet ipsos custodes ?"))
+if __name__ == "__main__":
+    print(pig_it("Quis custodiet ipsos custodes ?"))
