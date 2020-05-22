@@ -1,9 +1,18 @@
-from Codewars.top_3_words import top_3_words
+# from os import sys
+# sys.path.insert(0, ".")
+# from codewars.top_3_words import top_3_words
+from collections import Counter
+from re import findall
+
+
+def top_3_words(s):
+    return [k for k, _ in Counter(findall("'?[a-z]+'*[a-z]*'?", s.lower())).most_common(3)]
 
 
 def test_assert_equals():
     assert top_3_words("a a a  b  c c  d d d d  e e e e e") == ["e", "d", "a"]
-    assert top_3_words("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e") == ["e", "ddd", "aa"]
+    assert top_3_words("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e") == [
+        "e", "ddd", "aa"]
     assert top_3_words("  //wont won't won't ") == ["won't", "wont"]
     assert top_3_words("  , e   .. ") == ["e"]
     assert top_3_words("  ...  ") == []
