@@ -1,5 +1,5 @@
 # Ignored folders
-myvenv/
+venv/
 .vscode/
 .pytest_cache/
 __pycache__/
