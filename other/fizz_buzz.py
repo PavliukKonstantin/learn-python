@@ -13,25 +13,25 @@
 # то функция возвращает пустую строку.
 
 
-def fizz_buzz(begin, end):
-    string = ''
-    for number in range(begin, end + 1):
-        if not (number % 15):
-            string += 'FizzBuzz '
-        elif not (number % 3):
-            string += 'Fizz '
-        elif not (number % 5):
-            string += 'Buzz '
-        else:
-            string += str(number) + ' '
-    return string[:-1]
+# def fizz_buzz(begin, end):
+#     string = ''
+#     for number in range(begin, end + 1):
+#         if not (number % 15):
+#             string += 'FizzBuzz '
+#         elif not (number % 3):
+#             string += 'Fizz '
+#         elif not (number % 5):
+#             string += 'Buzz '
+#         else:
+#             string += str(number) + ' '
+#     return string[:-1]
 
 
-print(fizz_buzz(11, 20))
+# print(fizz_buzz(11, 20))
 
 
-# print(list(map(lambda _: ("{}{}".format('Fizz' * (not _ % 5), 'Buzz' * (not _ % 3))) or _, range(1, 101))))
-
+# print(list(map(lambda x: ("{}{}".format('Fizz' * (not x % 5), 'Buzz' * (not x % 3))) or x, range(1, 101))))
+print('\n'.join(("{}{}".format('Fizz' * (not x % 5), 'Buzz' * (not x % 3))) or str(x) for x in range(1, 101)))
 
 # def fizzbuzz(number):
 #     return {
