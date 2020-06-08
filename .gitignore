@@ -1,6 +1,8 @@
 # Ignored folders
+.venv/
 venv/
 .vscode/
 .pytest_cache/
 __pycache__/
 .env
+poetry.toml

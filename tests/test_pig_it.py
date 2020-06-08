@@ -1,4 +1,4 @@
-from codewars.pig_it import pig_it
+from learn_python.codewars.pig_it import pig_it
 
 
 def test_pig_it():
