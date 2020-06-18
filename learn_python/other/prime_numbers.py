@@ -1,12 +1,12 @@
-import time
+from datetime import datetime
 
 
 def prime_numbers(n):
     lst = [1, 2]
     for i in range(3, n+1, 2):
-        if (i > 10) and not(i % 5):
+        if not(i % 5) and (i > 10):
             continue
-        for j in lst:
+        for j in lst[2:]:
             if j * j - 1 > i:
                 lst.append(i)
                 break
@@ -17,8 +17,8 @@ def prime_numbers(n):
     return lst
 
 
-start_time = time.time()
+start_time = datetime.now()
 
-print(prime_numbers(60))
+print(prime_numbers(100))
 
-print(time.time() - start_time)
+print(datetime.now() - start_time)
