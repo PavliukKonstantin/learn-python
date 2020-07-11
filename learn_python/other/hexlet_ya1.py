@@ -19,6 +19,7 @@ for number, count in counter.items():
         result = number
         max_count = count
 
+
 print("Больше всех встречается ->", result)
 print("Встречается", max_count, "раз")
 
