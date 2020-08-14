@@ -31,7 +31,7 @@
 
 
 # print(list(map(lambda x: ("{}{}".format('Fizz' * (not x % 5), 'Buzz' * (not x % 3))) or x, range(1, 101))))
-print('\n'.join(("{}{}".format('Fizz' * (not x % 5), 'Buzz' * (not x % 3))) or str(x) for x in range(1, 101)))
+print('\n'.join((f"{'Fizz' * (not x % 5)}{'Buzz' * (not x % 3)}") or str(x) for x in range(1, 101)))
 
 # def fizzbuzz(number):
 #     return {
